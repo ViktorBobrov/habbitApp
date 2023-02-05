@@ -3,7 +3,7 @@ let habbits =[];
 const habbitKey = 'HABBIT_KEY';
 /*page*/
 const page = {
-	menu:document.querySelector('.menu__list')
+	menu:document.querySelector('.menu__list'),
 };
 /*utils*/
  function loadData(){
@@ -34,7 +34,8 @@ function rerenderMenu(activeHabbit){
 		}
 		if(activeHabbit.id === habbit.id){
 			existed.classList.add('menu__item_active');
-		}else{
+		}
+		else{
 			existed.classList.remove('menu__item_active');
 		}
 	}
@@ -48,7 +49,6 @@ function rerender(activeHabbitId){
  /*init*/ 
  (() => {
 	loadData();
-	})();
-	(() => {
 	rerender(habbits[0].id);
 	})();
+	
